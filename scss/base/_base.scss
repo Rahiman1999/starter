@@ -19,6 +19,9 @@ html {
   @include responds(phone) {
     font-size: 30%;
   }
+  @include responds(small) {
+    font-size: 12.5%;
+  }
 }
 body {
   box-sizing: border-box;

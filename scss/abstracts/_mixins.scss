@@ -35,6 +35,11 @@
       @content;
     }
   }
+  @if $breakpoint == small {
+    @media (max-width: 25em) {
+      @content;
+    }
+  }
 }
 
 @mixin responded {
