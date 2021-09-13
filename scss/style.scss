@@ -1,9 +1,10 @@
+@import "abstracts/mixins";
 @import "base/base";
 @import "base/animation";
 @import "base/utilities";
 @import "base/typography";
 @import "abstracts/function";
-@import "abstracts/mixins";
+
 @import "abstracts/variables";
 @import "pages/home";
 @import "component/button";
