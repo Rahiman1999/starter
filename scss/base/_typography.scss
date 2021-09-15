@@ -4,7 +4,6 @@ body {
   font-size: 1.4rem;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
 }
 .heading {
   &-box {
@@ -27,6 +26,11 @@ body {
     animation: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
+    @include responds(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
   &-sub {
     display: block;
@@ -37,6 +41,9 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     margin-bottom: 6rem;
+    @include responds(phone) {
+      letter-spacing: 0.8rem;
+    }
   }
 }
 .heading-secondary {
@@ -52,6 +59,13 @@ body {
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  @include responds(tab-port) {
+    font-size: 3rem;
+  }
+  @include responds(phone) {
+    font-size: 2.5rem;
   }
 }
 .heading-tertiary {

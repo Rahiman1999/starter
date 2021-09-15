@@ -11,6 +11,11 @@
   background-position: center;
   background-size: cover;
   position: relative;
+
+  @include responds(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
 }
 
 .logo {

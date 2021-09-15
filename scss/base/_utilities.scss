@@ -9,10 +9,17 @@
 }
 .center-text-margin-medium-2 {
   margin-bottom: 4rem !important;
+
+  @include responds(tab-port) {
+    margin-bottom: 3rem !important;
+  }
 }
 .center-text-margin-small {
   margin-bottom: 2rem;
 }
 .center-text-margin-top-huge {
   margin-top: 10rem;
+  @include responds(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
