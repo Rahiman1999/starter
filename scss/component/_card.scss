@@ -159,7 +159,8 @@
   }
 }
 
-@include responds(tab-port) {
+// @include responds(tab-port)
+@media only screen and (max-width: 56.25em), only screen and(hover:none) {
   .card {
     height: auto;
     border-radius: 3px;
