@@ -4,7 +4,7 @@
       rgba(126, 213, 111, 0.795),
       rgba(40, 180, 133, 0.801)
     ),
-    url("../img/hero.jpg");
+    url("../img/hero-small.jpg");
   height: 95vh;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -12,18 +12,34 @@
   background-size: cover;
   position: relative;
 
-  @include responds(phone) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    height: 95vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   }
-}
 
-.logo {
-  height: 35px;
+  @media (min-resolution: 192dpi) and (max-width: 600px), (max-width: 2000px) {
+    header {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(126, 213, 111, 0.795),
+          rgba(40, 180, 133, 0.801)
+        ),
+        url("../img/hero.jpg");
+    }
+    @include responds(phone) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+  }
 
-  &-box {
-    position: absolute;
-    top: 4rem;
-    left: 5rem;
+  .logo {
+    height: 35px;
+
+    &-box {
+      position: absolute;
+      top: 4rem;
+      left: 5rem;
+    }
   }
 }
